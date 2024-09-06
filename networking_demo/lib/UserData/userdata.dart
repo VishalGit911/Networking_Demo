@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 import 'model_class.dart';
-
 
 class Userdata extends StatefulWidget {
   const Userdata({super.key});
@@ -42,12 +40,12 @@ class _UserdataState extends State<Userdata> {
             return Center(
               child: Text("Error: ${snapshot.hasError}"),
             );
-          } else if (snapshot.hasData) {
+            } else if (snapshot.hasData) {
             return ListView.builder(
               itemCount: userdatanew.length,
               itemBuilder: (context, index) {
                 return ListTile(
-                 title: Text(userdatanew[index].id.toString()),
+                  title: Text(userdatanew[index].id.toString()),
                   subtitle: Text(userdatanew[index].title),
                 );
               },
