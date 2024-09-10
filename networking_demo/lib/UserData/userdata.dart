@@ -28,6 +28,7 @@ class _UserdataState extends State<Userdata> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Netweorking "),
+        backgroundColor: Colors.white,
       ),
       body: FutureBuilder(
         future: getdata(),
@@ -40,7 +41,7 @@ class _UserdataState extends State<Userdata> {
             return Center(
               child: Text("Error: ${snapshot.hasError}"),
             );
-            } else if (snapshot.hasData) {
+          } else if (snapshot.hasData) {
             return ListView.builder(
               itemCount: userdatanew.length,
               itemBuilder: (context, index) {
